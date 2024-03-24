@@ -86,6 +86,11 @@ public class ManHinhDonVi extends JFrame {
 		contentPane.add(lblNewLabel_1);
 		
 		JButton btnTemp = new JButton("Đổi");
+		btnTemp.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				convertTemp();
+			}
+		});
 		btnTemp.setBounds(261, 284, 89, 23);
 		contentPane.add(btnTemp);
 		
@@ -131,14 +136,13 @@ public class ManHinhDonVi extends JFrame {
 		return index;
 	}
 	
-	void convertLength() {
+	private void convertLength() {
 		int[] gap = {0,3,6};
 		int inputValue = Integer.parseInt(Length_Input.getText());
 		double outputValue;
 		String formatted;
 		int lengthInputType_str = getIndex(lengthInput_type.getSelectedItem().toString());
 		int lengthOnputType_str = getIndex(lengthOutput_type.getSelectedItem().toString());
-		
 		if(lengthInputType_str >= lengthOnputType_str) {
 			outputValue = inputValue * gapValue(gap[lengthInputType_str - lengthOnputType_str]);
 			formatted = String.format("%.1f", outputValue);
@@ -148,5 +152,23 @@ public class ManHinhDonVi extends JFrame {
 		}
 		
 		Length_Output.setText(formatted);
+	}
+	
+	private void convertTemp() {
+		int inputValue = Integer.parseInt(Temp_Input.getText());
+		double outputValue;
+		String formatted;
+		String tempInputType_str = tempInput_type.getSelectedItem().toString();
+		String tempOutputType_str = tempOutput_type.getSelectedItem().toString();
+		
+		if(tempInputType_str.equals(tempOutputType_str)) {
+			outputValue = inputValue;
+		}else if(tempInputType_str.equals("C") && tempOutputType_str.equals("F")){
+			outputValue = (9.0/5)*inputValue + 32;
+		}else {
+			outputValue = (inputValue - 32) * (5.0/9);
+		}
+		formatted = String.format("%.5f", outputValue);
+		Temp_Output.setText(formatted);
 	}
 }
