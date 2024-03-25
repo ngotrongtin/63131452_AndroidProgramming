@@ -172,7 +172,7 @@ public class ManHinhDonVi extends JFrame {
 		}else {
 			outputValue = (inputValue - 32) * (5.0/9);
 		}
-		formatted = String.format("%.5f", outputValue);
+		formatted = String.format("%.1f", outputValue);
 		Temp_Output.setText(formatted);
 	}
 }
