@@ -6,15 +6,39 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <View
+        android:id="@+id/left_background"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="#87CEEB"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Nửa màn hình bên phải với background màu xám -->
+    <View
+        android:id="@+id/right_background"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="#CCCCCC"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginStart="155dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="156dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="264dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/_43420637_1872373729784534_622190529528889603_n" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
