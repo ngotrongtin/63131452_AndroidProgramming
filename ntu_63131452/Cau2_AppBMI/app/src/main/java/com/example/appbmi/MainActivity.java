@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void calculate(View view){
+    public void calculate(View view) {
         double weight, height, bmi;
 
         EditText inputWeight_ele = findViewById(R.id.inputWeight);
@@ -34,14 +34,12 @@ public class MainActivity extends AppCompatActivity {
         //calculate
         weight = Double.parseDouble(inputWeight_ele.getText().toString());
         height = Double.parseDouble(inputHeight_ele.getText().toString());
-        bmi = weight / Math.sqrt(height);
+        bmi = weight / (height*height);
 
         EditText bmiOutput_ele = findViewById(R.id.bmiOutput);
         bmiOutput_ele.setText(String.valueOf(bmi));
 
         TextView noticeOutput_ele = findViewById(R.id.noticeOutput);
         noticeOutput_ele.setText(severity(bmi));
-
     }
-
 }
