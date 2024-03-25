@@ -54,6 +54,7 @@ public class ManHinhDonVi extends JFrame {
 		contentPane.add(lblNewLabel);
 		
 		JButton btnLegth = new JButton("Đổi");
+		btnLegth.setFont(new Font("Tahoma", Font.PLAIN, 22));
 		btnLegth.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				convertLength();
@@ -88,6 +89,7 @@ public class ManHinhDonVi extends JFrame {
 		contentPane.add(lblNewLabel_1);
 		
 		JButton btnTemp = new JButton("Đổi");
+		btnTemp.setFont(new Font("Tahoma", Font.PLAIN, 22));
 		btnTemp.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				convertTemp();
