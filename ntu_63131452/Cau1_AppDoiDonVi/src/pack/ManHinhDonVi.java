@@ -16,6 +16,7 @@ import java.awt.Font;
 import javax.swing.DefaultComboBoxModel;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Color;
 
 public class ManHinhDonVi extends JFrame {
 
@@ -40,6 +41,7 @@ public class ManHinhDonVi extends JFrame {
 		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		setBounds(100, 100, 643, 494);
 		contentPane = new JPanel();
+		contentPane.setBackground(Color.LIGHT_GRAY);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setVisible(true);
 		setContentPane(contentPane);
@@ -57,7 +59,7 @@ public class ManHinhDonVi extends JFrame {
 				convertLength();
 			}
 		});
-		btnLegth.setBounds(261, 92, 89, 23);
+		btnLegth.setBounds(243, 85, 117, 47);
 		contentPane.add(btnLegth);
 		
 		Length_Input = new JTextField();
@@ -91,7 +93,7 @@ public class ManHinhDonVi extends JFrame {
 				convertTemp();
 			}
 		});
-		btnTemp.setBounds(261, 284, 89, 23);
+		btnTemp.setBounds(243, 270, 117, 47);
 		contentPane.add(btnTemp);
 		
 		Temp_Input = new JTextField();
