@@ -149,10 +149,10 @@ public class ManHinhDonVi extends JFrame {
 		int lengthOnputType_str = getIndex(lengthOutput_type.getSelectedItem().toString());
 		if(lengthInputType_str >= lengthOnputType_str) {
 			outputValue = inputValue * gapValue(gap[lengthInputType_str - lengthOnputType_str]);
-			formatted = String.format("%.1f", outputValue);
+			formatted = String.format("%.0f", outputValue);
 		}else {
 			outputValue = inputValue * (1.0/gapValue(gap[lengthOnputType_str - lengthInputType_str]));
-			formatted = String.format("%.7f", outputValue);
+			formatted = String.format("%.6f", outputValue);
 		}
 		
 		Length_Output.setText(formatted);
