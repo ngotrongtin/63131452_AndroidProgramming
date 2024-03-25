@@ -107,8 +107,9 @@
         android:layout_marginTop="41dp"
         android:layout_marginEnd="39dp"
         android:ems="10"
+        android:hint="bmi"
         android:inputType="text"
-        android:text="bmi"
+        android:textColorHint="#8C7F7F"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView6"
         app:layout_constraintTop_toBottomOf="@+id/btn_cal" />
