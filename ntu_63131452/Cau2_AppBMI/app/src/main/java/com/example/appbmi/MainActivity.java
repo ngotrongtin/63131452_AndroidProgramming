@@ -26,4 +26,22 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private void calculate(View view){
+        double weight, height, bmi;
+
+        EditText inputWeight_ele = findViewById(R.id.inputWeight);
+        EditText inputHeight_ele = findViewById(R.id.inputHeight);
+        //calculate
+        weight = Double.parseDouble(inputWeight_ele.getText().toString());
+        height = Double.parseDouble(inputHeight_ele.getText().toString());
+        bmi = weight / Math.sqrt(height);
+
+        EditText bmiOutput_ele = findViewById(R.id.bmiOutput);
+        bmiOutput_ele.setText(String.valueOf(bmi));
+
+        TextView noticeOutput_ele = findViewById(R.id.noticeOutput);
+        noticeOutput_ele.setText(severity(bmi));
+
+    }
+
 }
