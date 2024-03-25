@@ -89,32 +89,39 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="52dp"
         android:text="Chỉ số bmi của bạn là:"
         android:textColor="#51A4E6"
         android:textSize="20dp"
-        tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="469dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_cal" />
 
     <EditText
         android:id="@+id/editTextText3"
         android:layout_width="132dp"
         android:layout_height="46dp"
         android:layout_marginStart="18dp"
+        android:layout_marginTop="41dp"
         android:layout_marginEnd="39dp"
         android:ems="10"
         android:inputType="text"
         android:text="bmi"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView6"
-        tools:layout_editor_absoluteY="458dp" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_cal" />
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="222dp"
         android:layout_height="66dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="58dp"
+        android:layout_marginEnd="93dp"
         android:text="TextView"
         android:visibility="visible"
-        tools:layout_editor_absoluteX="96dp"
-        tools:layout_editor_absoluteY="562dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
