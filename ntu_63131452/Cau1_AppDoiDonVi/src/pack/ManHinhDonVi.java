@@ -45,9 +45,9 @@ public class ManHinhDonVi extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("Chuyển đổi đơn vị đo");
+		JLabel lblNewLabel = new JLabel("Chuyển đổi khoảng cách");
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblNewLabel.setBounds(195, 30, 226, 47);
+		lblNewLabel.setBounds(174, 27, 257, 47);
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		contentPane.add(lblNewLabel);
 		
