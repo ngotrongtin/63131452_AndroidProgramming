@@ -71,6 +71,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="124dp"
+        android:onClick="LoginCheck"
         android:text="Xác Nhận"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -80,9 +81,12 @@
         android:id="@+id/NotifyArea"
         android:layout_width="248dp"
         android:layout_height="91dp"
+        android:layout_marginTop="92dp"
         android:background="#B65E5E"
         android:padding="30px"
         android:textAlignment="center"
-        tools:layout_editor_absoluteX="83dp"
-        tools:layout_editor_absoluteY="570dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SubmitBtn" />
 </androidx.constraintlayout.widget.ConstraintLayout>
