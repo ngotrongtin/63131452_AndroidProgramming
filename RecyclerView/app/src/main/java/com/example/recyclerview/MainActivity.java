@@ -21,11 +21,11 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView.LayoutManager layouLinear = new LinearLayoutManager(this);
         recyclerViewLandScape.setLayoutManager(layouLinear);
         landScapeAdapter = new LandScapeAdapter(this, recyclerViewData);
-        recyclerViewLandScape.setAdapter((landScapeAdapter));
+        recyclerViewLandScape.setAdapter(landScapeAdapter);
     }
     ArrayList<LandScape> getDataForRecyclerView(){
         ArrayList<LandScape> dsDuLieu = new ArrayList<LandScape>();
-        LandScape landScape1 = new LandScape("anhmeocute1.jpg", "ảnh meo cute 1");
+        LandScape landScape1 = new LandScape("anhmeocute1", "ảnh meo cute 1");
         dsDuLieu.add(landScape1);
         dsDuLieu.add(new LandScape("anhmeocute2", "ảnh mèo con cute 2"));
         dsDuLieu.add(new LandScape("anhmeocute3", "ảnh mèo con cute 3"));
